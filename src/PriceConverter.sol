@@ -13,7 +13,11 @@ library PriceConverter {
         return uint256(price * 1e10);
     }
 
-    function getConversionRate(uint256 _ethAmount, AggregatorV3Interface priceFeedAddress) internal view returns (uint256) {
+    function getConversionRate(uint256 _ethAmount, AggregatorV3Interface priceFeedAddress)
+        internal
+        view
+        returns (uint256)
+    {
         uint256 price = getPrice(priceFeedAddress);
         uint256 ethInUsd = (price * _ethAmount) / 1e18;
         return ethInUsd;

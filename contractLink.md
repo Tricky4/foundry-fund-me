@@ -1,0 +1,1 @@
+[First Contract deployed from foundry and verified on Etherscan](https://sepolia.etherscan.io/address/0x779a1ec7017ea9047b50d82ad7cbb571dbc95d93)

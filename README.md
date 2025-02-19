@@ -44,11 +44,24 @@ $ forge snapshot
 ```shell
 $ anvil
 ```
+### .env Sample
+ETH_SEPOLIA_RPC_URL=<ETH_SEPOLIA_RPC_URL>
+ETH_MAINNET_RPC_URL=<ETH_MAINNET_RPC_URL>
+ETH_SEPOLIA_PRIVATE_KEY=<ETH_SEPOLIA_PRIVATE_KEY>
+ETHERSCAN_API_KEY=<ETHERSCAN_API_KEY>
+
+### Installation
+```shell
+$ forge install foundry-rs/forge-std@v1.9.6 --no-commit
+$ forge install smartcontractkit/chainlink-brownie-contracts@v1.3.0 --no-commit
+$ forge install Cyfrin/foundry-devops@0.3.2 --no-commit
+```
 
 ### Deploy
 
 ```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+$ source .env
+$ forge script script/DeployFundMe.s.sol:DeployFundMe --rpc-url $ETH_SEPOLIA_RPC_URL --private-key $ETH_SEPOLIA_PRIVATE_KEY --broadcast -vvvv
 ```
 
 ### Cast
